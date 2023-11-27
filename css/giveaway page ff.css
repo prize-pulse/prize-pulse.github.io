@@ -26,7 +26,7 @@ position: fixed;
       border: 1px solid #ccc;
       border-radius: 5px;
       background-color: #707070;
-	    width: 70%;
+	    width: 850%;
 	    height: 70%;
       z-index: 9;
 	    transform: translate(-50%, -50%);
@@ -41,8 +41,9 @@ position: fixed;
 
     .close-btn {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 1px;
+      right: 5px;
       cursor: pointer;
 	    color: black;
+	    
       }
