@@ -37,12 +37,11 @@ timeS.innerHTML = "Time Remaining: Error When Fetching.!";
 var prizeF = data.data.prize ? data.data.prize : "Not Provided";
 var timeF = data.data.time_left ? data.data.time_left : "0";
 var userCountF = data.data.usersCount ? data.data.usersCount : 0;
-prizeS.innerHTML = `Prize: ${prizeF}`;
-timeS.innerHTML = `Time Remaining: ${timeF}`;
-userCountS.innerHTML = `Total Participants: ${userCountF}`;
 msTimeC = data.data.time_left;
-setInterval(() => {
-msTimeC = msTimeC - 1000;
+prizeS.innerHTML = `Prize: ${prizeF}`;
+timeS.innerHTML = `Time Remaining: ${ms(msTimeC).days} D, ${ms(msTimeC).hours} H, ${ms(msTimeC).minutes} M, ${ms(msTimeC).seconds} S;`;
+userCountS.innerHTML = `Total Participants: ${userCountF}`;
+ msTimeC - 1000;
 if(msTimeC < 0){
   timeS.innerHTML = `Time Remaining: 0 D, 0 H, 0 M, 0 S;`;
   return;
